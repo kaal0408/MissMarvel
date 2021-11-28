@@ -19,7 +19,7 @@
 
 <h2 align="center";>Marvel-English</h2>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/noobanon/missmarvel)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kaal0408/missmarvel)
 
 
 <h2 align="center";>OWNER</h2>
