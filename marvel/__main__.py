@@ -173,7 +173,7 @@ def start(update, context):
             buttons = InlineKeyboardMarkup( 
                 [[InlineKeyboardButton(text="🎉 Add Me", url="t.me/YukoAraki_bot?startgroup=botstart"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")],
                 [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/Pikachux_support")],
-                [InlineKeyboardButton(text="Repo", url="https"https://t.me/Pikachux_support")]])
+                
             update.effective_message.reply_text(
                 tld(update.effective_message, PM_START_TEXT).format(escape_markdown(first_name), escape_markdown(context.bot.first_name), OWNER_ID),
                 disable_web_page_preview=True,
