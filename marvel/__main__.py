@@ -199,36 +199,6 @@ def start(update, context):
     # lets try to get as much information from the telegram update as possible
     
 
-    try:
-        if mod_match:
-            module = mod_match.group(1)
-            text = tld(update.effective_message, "This is help for the module *{}*:\n").format(HELPABLE[module].__mod_name__) \
-                   + tld(update.effective_message, HELPABLE[module].__help__)
-
-            query.message.edit_text(text=text,
-                                  parse_mode=ParseMode.MARKDOWN,
-                                  reply_markup=InlineKeyboardMarkup(
-                                        [[InlineKeyboardButton(text=tld(query.message, "Back"), callback_data="help_back")]]))
-
-        elif prev_match:
-            curr_page = int(prev_match.group(1))
-            query.message.edit_text(text=tld(query.message, HELP_STRINGS),
-                                  parse_mode=ParseMode.MARKDOWN,
-                                  reply_markup=InlineKeyboardMarkup(
-                                        paginate_modules(curr_page - 1, HELPABLE, "help")))
-
-        elif next_match:
-            next_page = int(next_match.group(1))
-            query.message.edit_text(text=tld(query.message, HELP_STRINGS),
-                                  parse_mode=ParseMode.MARKDOWN,
-                                  reply_markup=InlineKeyboardMarkup(
-                                        paginate_modules(next_page + 1, HELPABLE, "help")))
-
-        elif back_match:
-            query.message.edit_text(text=tld(query.message, HELP_STRINGS),
-                                  parse_mode=ParseMode.MARKDOWN,
-                                  reply_markup=InlineKeyboardMarkup(paginate_modules(0, HELPABLE, "help")))
-
         # ensure no spinny white circle
         context.bot.answer_callback_query(query.id)
     except Exception as excp:
