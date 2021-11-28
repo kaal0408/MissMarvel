@@ -183,7 +183,7 @@ def start(update, context):
 # for test purposes
 
     # add all the dev user_ids in this list. You can also add ids of channels or groups.
-    devs = [OWNER_ID]
+    # devs = [OWNER_ID]
     # we want to notify the user of this problem. This will always work, but not notify users if the update is an 
     # callback or inline query, or a poll update. In case you want this, keep in mind that sending the message 
     # could fail
