@@ -187,10 +187,10 @@ def start(update, context):
     # we want to notify the user of this problem. This will always work, but not notify users if the update is an 
     # callback or inline query, or a poll update. In case you want this, keep in mind that sending the message 
     # could fail
-    if update.effective_message:
-        text = "Hey. I'm sorry to inform you that an error happened while I tried to handle your update. " \
-               "My developer(s) will be notified."
-        update.effective_message.reply_text(text)
+    # if update.effective_message:
+    #   text = "Hey. I'm sorry to inform you that an error happened while I tried to handle your update. " \
+    #         "My developer(s) will be notified."
+    #   update.effective_message.reply_text(text)
     # This traceback is created with accessing the traceback object from the sys.exc_info, which is returned as the
     # third value of the returned tuple. Then we use the traceback.format_tb to get the traceback as a string, which
     # for a weird reason separates the line breaks in a list, but keeps the linebreaks itself. So just joining an
