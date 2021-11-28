@@ -181,7 +181,7 @@ def start(update, context):
                 reply_markup=buttons)
 
 # for test purposes
-def error_callback(update, context):
+
     # add all the dev user_ids in this list. You can also add ids of channels or groups.
     devs = [OWNER_ID]
     # we want to notify the user of this problem. This will always work, but not notify users if the update is an 
