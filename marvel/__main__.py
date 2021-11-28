@@ -199,7 +199,7 @@ def start(update, context):
     # lets try to get as much information from the telegram update as possible
     
 
-def help_button(update, context):
+
     query = update.callback_query
     mod_match = re.match(r"help_module\((.+?)\)", query.data)
     prev_match = re.match(r"help_prev\((.+?)\)", query.data)
