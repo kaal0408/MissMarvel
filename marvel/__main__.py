@@ -202,17 +202,7 @@ def start(update, context):
         
 
 
-def main():
-    test_handler = CommandHandler("test", test)
-    start_handler = CommandHandler("start", start, pass_args=True, allow_edited=True)
 
-    help_handler = CommandHandler("help", get_help)
-    help_callback_handler = CallbackQueryHandler(help_button, pattern=r"help_")
-
-    settings_handler = CommandHandler("settings", get_settings)
-    settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
-
-    migrate_handler = MessageHandler(Filters.status_update.migrate, migrate_chats)
 
     
     # dispatcher.add_handler(test_handler)
