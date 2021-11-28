@@ -171,7 +171,7 @@ def start(update, context):
         else:
             first_name = update.effective_user.first_name
             buttons = InlineKeyboardMarkup( 
-                [[InlineKeyboardButton(text="🎉 Add Me", url="t.me/YukoAraki_bot?startgroup=botstart"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")],
+                [[InlineKeyboardButton(text="🎉 Add Me", url="t.me/Pikachu_x__bot?startgroup=botstart"), InlineKeyboardButton(text="❓ Help", callback_data="help_back")],
                 [InlineKeyboardButton(text="👥 Support Group", url="https://t.me/Pikachux_support")],
                 
             update.effective_message.reply_text(
@@ -179,12 +179,6 @@ def start(update, context):
                 disable_web_page_preview=True,
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=buttons)
-    else:
-        chat = update.effective_chat  # type: Optional[Chat]
-        user = update.effective_user  # type: Optional[User]
-        reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
-    reply_text(random.choice(RANDOM_START))
-	
 
 # for test purposes
 def error_callback(update, context):
